@@ -1,0 +1,360 @@
+/* ===========================
+   Global
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Noto Sans TC", sans-serif;
+    overflow-x: hidden;
+    background: #f8f9fa;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar {
+
+    padding: 15px 0;
+
+    transition: .3s;
+
+    z-index: 9999;
+}
+
+.navbar-brand {
+
+    font-size: 1.6rem;
+
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+
+    color: #fff !important;
+
+    margin-left: 15px;
+
+    font-weight: 500;
+
+    transition: .3s;
+}
+
+.navbar .nav-link:hover {
+
+    color: #ffd54f !important;
+}
+
+.navbar .btn {
+
+    color: #fff;
+}
+
+.navbar .btn:hover {
+
+    color: #ffd54f;
+}
+
+/* ===========================
+   Carousel
+=========================== */
+
+.carousel {
+
+    position: relative;
+}
+
+.hero-img {
+
+    width: 100%;
+
+    height: 100vh;
+
+    object-fit: cover;
+}
+
+/* 黑色遮罩 */
+
+.carousel-item {
+
+    position: relative;
+}
+
+.carousel-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, .45);
+
+    z-index: 1;
+}
+
+/* ===========================
+   Caption
+=========================== */
+
+.carousel-caption {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 50%;
+
+    transform: translateY(50%);
+}
+
+.carousel-caption h1 {
+
+    font-size: 4rem;
+
+    font-weight: bold;
+
+    text-shadow: 0 5px 15px rgba(0, 0, 0, .6);
+
+    animation: fadeDown 1s;
+}
+
+.carousel-caption p {
+
+    margin-top: 20px;
+
+    margin-bottom: 30px;
+
+    font-size: 1.4rem;
+
+    text-shadow: 0 3px 10px rgba(0, 0, 0, .6);
+
+    animation: fadeUp 1.2s;
+}
+
+.carousel-caption .btn {
+
+    padding: 14px 40px;
+
+    border-radius: 40px;
+
+    font-size: 1.1rem;
+
+    transition: .3s;
+}
+
+.carousel-caption .btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+}
+
+/* ===========================
+   左右箭頭
+=========================== */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, .35);
+
+    background-size: 60%;
+}
+
+/* ===========================
+   指示器
+=========================== */
+
+.carousel-indicators button {
+
+    width: 14px !important;
+
+    height: 14px !important;
+
+    border-radius: 50%;
+
+    margin: 0 8px;
+
+    background: #fff;
+}
+
+.carousel-indicators .active {
+
+    background: #198754;
+}
+
+/* ===========================
+   動畫
+=========================== */
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-50px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(50px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+/* ===========================
+   Desktop
+=========================== */
+
+@media(max-width:1200px) {
+
+    .carousel-caption h1 {
+
+        font-size: 3.5rem;
+    }
+
+    .carousel-caption p {
+
+        font-size: 1.25rem;
+    }
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:768px) {
+
+    .navbar-brand {
+
+        font-size: 1.3rem;
+    }
+
+    .hero-img {
+
+        height: 75vh;
+    }
+
+    .carousel-caption {
+
+        bottom: 42%;
+    }
+
+    .carousel-caption h1 {
+
+        font-size: 2.4rem;
+    }
+
+    .carousel-caption p {
+
+        font-size: 1rem;
+    }
+
+    .carousel-caption .btn {
+
+        font-size: 1rem;
+
+        padding: 12px 28px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:375px) {
+
+    .hero-img {
+
+        height: 65vh;
+    }
+
+    .carousel-caption {
+
+        width: 90%;
+
+        left: 5%;
+
+        right: 5%;
+
+        bottom: 38%;
+    }
+
+    .carousel-caption h1 {
+
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+
+        font-size: .9rem;
+
+        margin-top: 15px;
+
+        margin-bottom: 20px;
+    }
+
+    .carousel-caption .btn {
+
+        width: 170px;
+
+        min-height: 42px;
+
+        font-size: .9rem;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+}

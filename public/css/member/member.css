@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(20, 50, 70, .45), rgba(20, 50, 70, .45)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px 15px;
+}
+
+/*============================
+    主容器
+=============================*/
+.member-container {
+    max-width: 1180px;
+    width: 100%;
+    min-height: 680px;
+    margin: auto;
+    display: flex;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .25);
+}
+
+/*============================
+      左側選單
+=============================*/
+.sidebar {
+    width: 270px;
+    background: linear-gradient(180deg,
+            #0f766e,
+            #0f9d8f,
+            #3db4a6);
+    color: #fff;
+}
+
+.sidebar h2 {
+    padding: 35px 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 17px;
+    transition: .35s;
+}
+
+.sidebar li:hover {
+    background: rgba(255, 255, 255, .18);
+    transform: translateX(8px);
+}
+
+.sidebar li.active {
+    background: #ffffff;
+    color: #0f766e;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+}
+
+/*============================
+      右側內容
+=============================*/
+.content {
+    flex: 1;
+    padding: 45px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fade .35s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+h3 {
+    font-size: 32px;
+    color: #0f766e;
+    margin-bottom: 35px;
+    border-left: 8px solid #28c76f;
+    padding-left: 18px;
+    font-weight: 700;
+}
+
+/*============================
+      會員資料
+=============================*/
+.info {
+    background: #f8fbfb;
+    border-left: 5px solid #17a589;
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: .3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .05);
+}
+
+.info:hover {
+    transform: translateX(6px);
+    background: #edfdf9;
+}
+
+.info span:first-child {
+    color: #0f766e;
+    font-weight: bold;
+    display: inline-block;
+    width: 110px;
+}
+
+/*============================
+      表單
+=============================*/
+form {
+    max-width: 560px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+    color: #155e63;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #cfd8dc;
+    padding: 0 15px;
+    font-size: 16px;
+    transition: .3s;
+    background: #fff;
+}
+
+input:focus {
+    outline: none;
+    border-color: #17a589;
+    box-shadow: 0 0 0 .2rem rgba(23, 165, 137, .25);
+}
+
+/*============================
+      按鈕
+=============================*/
+button {
+    min-height: 46px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg,
+            #17a589,
+            #28c76f);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 8px 18px rgba(40, 199, 111, .3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(40, 199, 111, .45);
+}
+
+/*============================
+      密碼眼睛
+=============================*/
+#viewbtn,
+#view3,
+#view4 {
+    cursor: pointer;
+    color: #17a589;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#viewbtn:hover,
+#view3:hover,
+#view4:hover {
+    color: #28c76f;
+}
+
+/*============================
+      RWD
+=============================*/
+@media(max-width:992px) {
+    .member-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar ul {
+        display: flex;
+        padding: 10px;
+    }
+
+    .sidebar li {
+        flex: 1;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .content {
+        padding: 30px;
+    }
+}
+
+@media(max-width:768px) {
+    body {
+        padding: 15px;
+    }
+
+    .member-container {
+        border-radius: 18px;
+    }
+
+    .content {
+        padding: 22px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    .info span:first-child {
+        width: 90px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media(max-width:375px) {
+    .sidebar h2 {
+        font-size: 22px;
+    }
+
+    .sidebar ul {
+        flex-direction: column;
+    }
+
+    .sidebar li {
+        width: 100%;
+    }
+
+    .content {
+        padding: 18px;
+    }
+
+    form {
+        width: 100%;
+    }
+}

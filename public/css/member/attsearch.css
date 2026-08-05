@@ -1,0 +1,314 @@
+/*==========================
+    搜尋區塊
+===========================*/
+
+.search-card {
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, .92);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+
+}
+
+/* Label */
+
+.search-card .form-label {
+
+    font-weight: 700;
+
+    color: #0f766e;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+/*==========================
+      Input Group
+===========================*/
+
+.search-card .input-group-text {
+
+    background: linear-gradient(135deg,
+            #17a589,
+            #28c76f);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 14px 0 0 14px;
+
+}
+
+/*==========================
+        Input
+===========================*/
+
+.search-card .form-control {
+
+    height: 48px;
+
+    border-radius: 0 14px 14px 0;
+
+    border: 1px solid #d6e4e5;
+
+    transition: .3s;
+
+}
+
+.search-card .form-control:focus {
+
+    border-color: #17a589;
+
+    box-shadow: 0 0 0 .2rem rgba(23, 165, 137, .25);
+
+}
+
+/*==========================
+        Select
+===========================*/
+
+.search-card .form-select {
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    border: 1px solid #d6e4e5;
+
+    transition: .3s;
+
+}
+
+.search-card .form-select:focus {
+
+    border-color: #17a589;
+
+    box-shadow: 0 0 0 .2rem rgba(23, 165, 137, .25);
+
+}
+
+/*==========================
+      景點數
+===========================*/
+
+.result-count {
+
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg,
+            #0f766e,
+            #17a589);
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    box-shadow: 0 8px 20px rgba(23, 165, 137, .25);
+
+}
+
+.result-count span {
+
+    font-size: 22px;
+
+    margin: 0 6px;
+
+    color: #fff8c4;
+
+}
+
+/*==========================
+        Hover
+===========================*/
+
+.search-card select:hover,
+.search-card input:hover {
+
+    border-color: #17a589;
+
+}
+
+/*==========================
+          RWD
+===========================*/
+
+@media(max-width:992px) {
+
+    .search-card {
+
+        padding: 25px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .search-card {
+
+        border-radius: 18px;
+
+    }
+
+    .search-card .form-control,
+    .search-card .form-select,
+    .result-count {
+
+        height: 44px;
+
+    }
+
+    .search-card .form-label {
+
+        text-align: left;
+
+    }
+
+}
+
+@media(max-width:375px) {
+
+    .search-card {
+
+        padding: 18px;
+
+    }
+
+    .result-count {
+
+        font-size: 16px;
+
+    }
+
+    .result-count span {
+
+        font-size: 18px;
+
+    }
+
+}
+
+/* ===========================
+   Attraction Card
+=========================== */
+
+.attraction-card {
+
+    border-radius: 18px;
+
+    transition: .3s;
+
+    overflow: hidden;
+
+    background: #fff;
+
+}
+
+.attraction-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+}
+
+/* 圖片 */
+
+.attraction-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+
+}
+
+.attraction-card:hover .attraction-img {
+
+    transform: scale(1.08);
+
+}
+
+/* 標題 */
+
+.card-title {
+
+    font-size: 1.4rem;
+
+    line-height: 1.4;
+
+}
+
+/* 介紹 */
+
+.card-text {
+
+    line-height: 1.8;
+
+    font-size: .95rem;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 4;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+}
+
+/* 收藏按鈕 */
+
+.favorite {
+
+    min-width: 90px;
+
+    min-height: 40px;
+
+    font-weight: 600;
+
+    border-radius: 30px;
+
+}
+
+/* 查看更多 */
+
+.card .btn-success {
+
+    min-height: 42px;
+
+    font-weight: 600;
+
+    border-radius: 12px;
+
+}
+
+/* Badge */
+
+.badge {
+
+    font-size: .85rem;
+
+    padding: .55em .8em;
+
+}

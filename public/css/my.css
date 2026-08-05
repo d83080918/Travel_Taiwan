@@ -1,0 +1,144 @@
+/* 字型 */
+@import url('https://fonts.googleapis.com/css2?family=Iansui&display=swap');
+
+
+/* 宣告變數 */
+:root {
+    /* Mountain Hiking Theme */
+
+    /* 背景主色 - 高山晨霧 */
+    --mountain-mist: #EEF2EE;
+
+    /* 背景輔色 - 雲層灰 */
+    --cloud-shadow: #D8DFD8;
+
+    /* 主色 - 森林綠 */
+    --forest-trail: #4F6B52;
+
+    /* 輔色 - 山岩灰 */
+    --granite-ridge: #7A8075;
+
+    /* 強調色 - 日出橘 */
+    --summit-sunrise: #D88C3A;
+
+    /* 強調輔色 - 湖泊藍 */
+    --alpine-lake: #6F8FAF;
+
+    /* 文字主色 */
+    --text-primary: #2B312C;
+
+    /* 文字輔色 */
+    --text-secondary: #5F685F;
+
+    /* 分隔線 */
+    --trail-border: #C3CCC3;
+
+    /* 卡片背景 */
+    --camp-base: #F8FAF7;
+}
+
+/* 字體粗細 */
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+/* 字體顏色 */
+.btn-mountain-mist {
+    color: var(--mountain-mist);
+}
+
+.btn-cloud-shadow {
+    color: var(--cloud-shadow);
+}
+
+.btn-forest-trail {
+    color: var(--forest-trail);
+}
+
+.btn-granite-ridge {
+    color: var(--granite-ridge);
+}
+
+.btn-summit-sunrise {
+    color: var(--summit-sunrise);
+}
+
+.btn-alpine-lake {
+    color: var(--alpine-lake);
+}
+
+.btn-text-primary {
+    color: var(--text-primary);
+}
+
+.btn-text-secondary {
+    color: var(--text-secondary);
+}
+
+.btn-trail-border {
+    color: var(--trail-border);
+}
+
+.btn-camp-base {
+    color: var(--camp-base);
+}
+
+/* 背景圖 */
+.bg-color {
+    background-position: center center;
+    background-size: cover;
+}
+
+.roller {
+    position: relative;
+    overflow: hidden;    
+    
+}
+
+.roller .roller-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    right: -100%;
+    transition: all 1s;
+}
+
+.roller:hover .roller-box {
+    right: 0;
+}
