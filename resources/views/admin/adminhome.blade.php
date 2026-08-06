@@ -325,13 +325,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="/a">
+                        <a class="nav-link active" href="#">
                             管理景點
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/admin/adminchart/">
                             景點收藏圖表
                         </a>
                     </li>

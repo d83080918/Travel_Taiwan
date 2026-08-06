@@ -21,6 +21,14 @@ class MemberController extends Controller
         $member = (new Member())->getMember($email, $pwd);
         if (empty($member)) {
             return back()->withInput()->withErrors(["err" => "Y"]);
+        } elseif ($member->id == 1) {
+            session()->put("memberId", $member->id);
+            session()->put("email", $member->email);
+            session()->put("admin", $member->id);
+            $url = session("admin_redirect", "/admin/adminhome");
+            session()->forget("admin_redirect");
+
+            return redirect($url);
         } else {
             session()->put("memberId", $member->id);
             session()->put("email", $member->email);

@@ -13,7 +13,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 40px 15px;
+
 }
 
 /*============================
@@ -23,7 +23,7 @@ body {
     max-width: 1180px;
     width: 100%;
     min-height: 680px;
-    margin: auto;
+    margin: 40px auto;
     display: flex;
     background: rgba(255, 255, 255, .95);
     backdrop-filter: blur(10px);

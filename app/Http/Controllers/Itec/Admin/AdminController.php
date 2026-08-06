@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Itec\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Attraction\Attraction;
+use App\Models\Collect\Collect;
 use App\Models\Member\Member;
 use Exception;
 use Illuminate\Http\Request;
@@ -127,5 +128,25 @@ class AdminController extends Controller
     {
         $req->Session()->flush();
         return response()->json(["status" => "success"]);
+    }
+
+    public function adminchart()
+    {
+        // 各景點按讚數
+        $favorite = Attraction::withCount("collect")
+            ->having("collect_count", ">", 0)
+            ->orderByDesc("collect_count")
+            ->get();
+
+        //各區域景點數
+        $eastCount = Attraction::where('attArea', 'east')->count();
+        $northCount = Attraction::where('attArea', 'north')->count();
+        $westCount = Attraction::where('attArea', 'west')->count();
+        $southCount = Attraction::where('attArea', 'south')->count();
+        $islandCount = Attraction::where('attArea', 'island')->count();
+
+        $member = Member::find(session()->get('memberId'));
+
+        return view("admin.adminchart", compact("favorite", "member", "eastCount", "northCount", "westCount", "southCount", "islandCount"));
     }
 }
