@@ -225,14 +225,26 @@ git clone https://github.com/d83080918/icap.git
 composer install
 ```
 
-3. 啟動
+3. 建立.env
+
+```env
+copy .env.example .env
+```
+
+4. 產生APP_KEY
+
+```APP_KEY
+php artisan key:generate
+```
+
+5. 啟動
 
 ```VS code
 php artisan serve
 ```
 
 
-4. 開啟網站
+6. 開啟網站
 
 ```text
 http://127.0.0.1:8000
