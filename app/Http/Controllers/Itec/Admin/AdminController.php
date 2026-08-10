@@ -29,7 +29,8 @@ class AdminController extends Controller
     public function edit(Request $req)
     {
         $editattraction = Attraction::find($req->id);
-        return view("admin.edit", compact("editattraction"));
+        $member = Member::find(session()->get('memberId'));
+        return view("admin.edit", compact("editattraction", "member"));
     }
 
     public function store(Request $req)

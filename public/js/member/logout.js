@@ -4,7 +4,7 @@ $(function () {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
         }
     });
-    $("#logout1,#logout2").on("click", function () {
+    $("#logout,#logout1,#logout2").on("click", function () {
         Swal.fire({
             title: "確定要登出嗎?",
             showDenyButton: true,
@@ -35,4 +35,5 @@ $(function () {
             }
         });
     });
+
 });

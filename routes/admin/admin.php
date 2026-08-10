@@ -10,6 +10,5 @@ Route::group(["prefix" => "admin"], function () {
     Route::get("edit/{id}", [AdminController::class, "edit"])->middleware("admin");
     Route::delete("delete", [AdminController::class, "delete"])->middleware("admin");
     Route::post("update", [AdminController::class, "update"])->middleware("admin");
-    Route::post("logout", [AdminController::class, "logout"])->middleware("admin");
     Route::get("adminchart", [AdminController::class, "adminchart"])->middleware("admin");
 });

@@ -1,147 +1,139 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+@extends('admin/adminlayout')
+@section("title","編輯景點")
+@section("content")
+<style>
+    html,
+    body {
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>編輯景點</title>
+        overflow-x: hidden;
 
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    }
 
+    body {
+        background: #f5f7fa;
+    }
 
-    <style>
-        html,
-        body {
+    .card {
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    }
 
-            overflow-x: hidden;
-
-        }
-
-        body {
-            background: #f5f7fa;
-        }
-
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-        }
-
-        .card-header {
-            font-size: 24px;
-            font-weight: bold;
-        }
+    .card-header {
+        font-size: 24px;
+        font-weight: bold;
+    }
 
 
 
-        .required {
-            color: red;
-        }
+    .required {
+        color: red;
+    }
 
 
 
+    .add-page {
+        max-width: 1100px;
+    }
+
+    .add-card {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .add-header {
+        font-size: 28px;
+        font-weight: 700;
+        padding: 20px;
+    }
+
+    .form-label {
+        font-weight: 700;
+    }
+
+    .form-control,
+    .form-select {
+        min-height: 48px;
+    }
+
+    textarea.form-control {
+
+        min-height: 220px;
+
+        resize: vertical;
+
+    }
+
+    .preview {
+        width: 100%;
+        max-width: 650px;
+        height: 350px;
+        margin-top: 20px;
+        border-radius: 12px;
+        border: 2px dashed #d8d8d8;
+        object-fit: cover;
+
+    }
+
+    .btn-save,
+    .btn-back {
+        min-height: 48px;
+        min-width: 150px;
+        margin: 8px;
+        font-weight: 700;
+    }
+
+
+    @media (max-width:991px) {
         .add-page {
-            max-width: 1100px;
+            max-width: 760px;
         }
 
-        .add-card {
-            border-radius: 20px;
-            overflow: hidden;
+        .preview {
+            height: 280px;
         }
 
         .add-header {
-            font-size: 28px;
-            font-weight: 700;
-            padding: 20px;
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width:576px) {
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
-        .form-label {
-            font-weight: 700;
+        .card {
+            border-radius: 12px;
+        }
+
+        .add-header {
+            font-size: 22px;
+            padding: 15px;
         }
 
         .form-control,
         .form-select {
-            min-height: 48px;
-        }
-
-        textarea.form-control {
-
-            min-height: 220px;
-
-            resize: vertical;
-
+            font-size: 16px;
         }
 
         .preview {
             width: 100%;
-            max-width: 650px;
-            height: 350px;
-            margin-top: 20px;
-            border-radius: 12px;
-            border: 2px dashed #d8d8d8;
-            object-fit: cover;
-
+            height: 220px;
         }
 
         .btn-save,
         .btn-back {
-            min-height: 48px;
-            min-width: 150px;
-            margin: 8px;
-            font-weight: 700;
+            width: 100%;
+            margin-bottom: 12px;
+            min-height: 44px;
         }
 
-
-        @media (max-width:991px) {
-            .add-page {
-                max-width: 760px;
-            }
-
-            .preview {
-                height: 280px;
-            }
-
-            .add-header {
-                font-size: 24px;
-            }
+        textarea {
+            min-height: 180px;
         }
-
-        @media (max-width:576px) {
-            .container {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
-            .card {
-                border-radius: 12px;
-            }
-
-            .add-header {
-                font-size: 22px;
-                padding: 15px;
-            }
-
-            .form-control,
-            .form-select {
-                font-size: 16px;
-            }
-
-            .preview {
-                width: 100%;
-                height: 220px;
-            }
-
-            .btn-save,
-            .btn-back {
-                width: 100%;
-                margin-bottom: 12px;
-                min-height: 44px;
-            }
-
-            textarea {
-                min-height: 180px;
-            }
-        }
-    </style>
+    }
+</style>
 
 </head>
 
@@ -259,9 +251,6 @@
             </div>
         </div>
     </div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/jquery-4.0.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         $("#photo").change(function() {
@@ -428,7 +417,4 @@
             location.href = "/admin/adminhome";
         });
     </script>
-
-</body>
-
-</html>
+    @endsection

@@ -12,9 +12,8 @@ class AttractionController extends Controller
 {
     public function list()
     {
-        $list = Attraction::get();
         $member = Member::where("id", session()->get("memberId"))->first();
-        return view("attractions.attractions", compact("list", "member"));
+        return view("attractions.attractions", compact("member"));
     }
 
     public function getList(Request $req)

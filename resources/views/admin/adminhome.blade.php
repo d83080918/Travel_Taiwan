@@ -79,9 +79,12 @@
             padding: 15px 0;
         }
 
-        .navbar {
-            transition: .3s;
-            padding: 15px 0;
+        .navbar-brand {
+
+            font-size: 1.5rem;
+
+            letter-spacing: 1px;
+
         }
 
         .navbar .nav-link {
@@ -732,7 +735,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: "/admin/logout",
+                        url: "/member/logout",
                         type: "POST",
                         data: {
                             _token: "{{csrf_token()}}"
@@ -746,7 +749,7 @@
                                     icon: "success"
                                 }).then((result) => {
                                     if (result.isConfirmed) {
-                                        location.href = "/attraction/list";
+                                        location.href = "/attraction/home";
                                     }
                                 });
                             }

@@ -327,7 +327,7 @@
                     </div>
                 </div>
                 <div class="row g-4" id="attractions">
-                    <!-- app.js 動態產生 -->
+
                 </div>
                 <div class="">
                     <nav>

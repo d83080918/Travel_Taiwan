@@ -1,0 +1,271 @@
+/* ===================================
+        Dashboard Theme
+=================================== */
+
+html,
+body {
+
+    overflow-x: hidden;
+
+    background: #eef3f8;
+
+}
+
+/* Bootstrap container */
+
+.dashboard-container {
+
+    max-width: 1320px;
+}
+
+/* Row */
+
+.dashboard-row {
+
+    align-items: stretch;
+}
+
+/* Card */
+
+.dashboard-card {
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, .05),
+        0 10px 30px rgba(0, 0, 0, .06);
+
+    position: relative;
+}
+
+.dashboard-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.dashboard-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .12);
+}
+
+/* Header */
+
+.chart-header {
+
+    background: #fff;
+
+    padding: 20px 28px;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.chart-title {
+
+    display: flex;
+
+    align-items: center;
+
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #1f2937;
+}
+
+.chart-title i {
+
+    color: #2563eb;
+
+    font-size: 22px;
+}
+
+/* Body */
+
+.chart-body {
+
+    padding: 25px;
+}
+
+/* Chart */
+
+.chart-body canvas {
+
+    width: 100% !important;
+
+    height: 500px !important;
+}
+
+/* Button */
+
+.btn {
+
+    min-height: 40px;
+
+    border-radius: 8px;
+}
+
+/* Image */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
+}
+
+/* 避免任何元素超出 */
+
+
+.container-fluid,
+.row {
+
+    max-width: 100%;
+}
+
+/* ===================================
+        1200px以上
+=================================== */
+
+@media (min-width:1200px) {
+
+    .dashboard-container {
+
+        max-width: 1280px;
+    }
+
+    .chart-body {
+
+        padding: 30px;
+    }
+
+    .chart-body canvas {
+
+        height: 520px !important;
+    }
+
+}
+
+/* ===================================
+        平板 768px
+=================================== */
+
+@media (max-width:768px) {
+
+    .dashboard-container {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+    .chart-header {
+
+        padding: 18px;
+    }
+
+    .chart-title {
+
+        font-size: 18px;
+    }
+
+    .chart-body {
+
+        padding: 16px;
+    }
+
+    .chart-body canvas {
+
+        height: 360px !important;
+    }
+
+}
+
+/* ===================================
+        手機 375px
+=================================== */
+
+@media (max-width:375px) {
+
+    .dashboard-container {
+
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+    .chart-header {
+
+        padding: 14px;
+    }
+
+    .chart-title {
+
+        font-size: 16px;
+    }
+
+    .chart-title i {
+
+        font-size: 18px;
+    }
+
+    .chart-body {
+
+        padding: 10px;
+    }
+
+    .chart-body canvas {
+
+        height: 250px !important;
+    }
+
+    /* Bootstrap Navbar */
+
+    .navbar-brand {
+
+        font-size: 18px;
+    }
+
+    .nav-link {
+
+        text-align: center;
+    }
+
+    /* Button */
+
+    .btn {
+
+        width: 100%;
+
+        min-height: 40px;
+    }
+
+}
