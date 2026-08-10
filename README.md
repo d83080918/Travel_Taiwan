@@ -60,11 +60,11 @@
 
 #### 會員資料修改
 
-|[會員資料修改畫面](screenshots/memberupdate.png)
+![會員資料修改畫面](screenshots/memberupdate.png)
 
 #### 會員景點收藏
 
-|[會員景點收藏畫面](screenshots/favorite.png)
+![會員景點收藏畫面](screenshots/favorite.png)
 
 #### 管理頁
 
