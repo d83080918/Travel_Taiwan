@@ -21,12 +21,14 @@
         body {
             background: #f5f6fa;
             font-family: "Noto Sans TC", sans-serif;
+            min-width: 375px;
+
         }
 
 
         /* Content */
         .content {
-            padding: 100px;
+            padding: 25px;
         }
 
         /* Card */
@@ -266,6 +268,8 @@
                 min-height: 40px;
             }
 
+
+
         }
 
 
@@ -295,6 +299,16 @@
                 height: 160px;
             }
 
+        }
+
+        .btn1206 {
+            margin-top: 0 !important;
+        }
+
+        @media (min-width:769px) and (max-width: 1206px) {
+            .btn1206 {
+                margin-top: 0.5rem !important;
+            }
         }
     </style>
 </head>
@@ -647,7 +661,7 @@
                                     <button class="btn btn-warning btn-sm editbtn" data-id="${item.id}">
                                         <i class="bi bi-pencil"></i>編輯
                                     </button>
-                                    <button class="btn btn-danger btn-sm deletebtn" data-id="${item.id}">
+                                    <button class="btn btn-danger btn-sm deletebtn  btn1206" data-id="${item.id}">
                                         <i class="bi bi-trash"></i>刪除
                                     </button>
                                 </td>

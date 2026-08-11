@@ -136,7 +136,6 @@ class AdminController extends Controller
         // 各景點按讚數
         $favorite = Attraction::withCount("collect")
             ->having("collect_count", ">", 0)
-            ->orderByDesc("collect_count")
             ->get();
 
         //各區域景點數
