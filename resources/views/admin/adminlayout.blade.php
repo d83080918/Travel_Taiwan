@@ -42,6 +42,37 @@
 
         }
 
+        /* 後台下拉選單 */
+        .dropdown-menu {
+            background-color: #FFFFFF;
+            border: 1px solid #198754;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 8px 0;
+        }
+
+        /* 下拉選單文字 */
+        .dropdown-menu .dropdown-item {
+            color: #343A40;
+            padding: 10px 20px;
+            transition: all 0.2s ease;
+        }
+
+        /* Hover */
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #DDF3E8;
+            color: #146C43;
+        }
+
+        /* 點擊 / focus */
+        .dropdown-menu .dropdown-item:focus,
+        .dropdown-menu .dropdown-item:active {
+            background-color: #C8EBD8;
+            color: #146C43;
+        }
+
+
+
         .navbar .nav-link:hover {
 
             color: #ffe082 !important;
@@ -62,6 +93,21 @@
 
             }
 
+        }
+
+        @media(max-width:375px) {
+            .dropdown-item {
+                text-align: center;
+            }
+        }
+
+        .page-title {
+            color: #146c43;
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 18px 0;
+            position: relative;
         }
     </style>
 
@@ -93,21 +139,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/attraction/list/">景點列表</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/adminhome">
-                            管理景點
+                        <a class="nav-link" href="#">
+                            熱門活動
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            景點收藏圖表
+                            旅遊攻略
                         </a>
                     </li>
-
                     @if(session()->has('memberId'))
                     @if(session('memberId') == 1)
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            後臺系統
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item " href="/admin/adminhome">管理景點</a></li>
+                            <li><a class="dropdown-item " href="/admin/adminchart">圖表資料</a></li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item">
                         <div class="nav-link">
                             管理員 {{ $member->userName }}
@@ -124,7 +178,7 @@
             </div>
         </div>
     </nav>
-
+    <div class="fw-bold text-center page-title">@yield("title2")</div>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/jquery-4.0.0.js"></script>
     <script src="/js/member/logout.js"></script>

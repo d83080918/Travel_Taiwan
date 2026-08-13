@@ -138,7 +138,6 @@
 </head>
 
 <body>
-    {{session('error')}}
     @if(session('error'))
     <script>
         Swal.fire({

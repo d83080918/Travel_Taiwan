@@ -1,5 +1,6 @@
 @extends('admin/adminlayout')
-@section("title","後端資料")
+@section("title","圖表資料")
+@section("title2","圖表資料")
 @push("style")
 <link rel="stylesheet" href="/css/admin/adminchart.css">
 @endpush
