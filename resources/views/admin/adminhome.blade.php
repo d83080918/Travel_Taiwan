@@ -250,7 +250,7 @@
 </style>
 @endpush
 @section("content")
-<div class="content">
+<div class="container content">
 
     <div class="card mb-4">
         <div class="card-body">

@@ -216,7 +216,7 @@
 1. Githut檔下載
 
 ```cmd
-git clone https://github.com/d83080918/icap.git
+git clone https://github.com/d83080918/Travel_Taiwan
 ```
 
 2. 安裝套件
@@ -256,4 +256,4 @@ http://127.0.0.1:8000
 | --- | --- |
 | 開發者 | 黃登群 |
 | 專案名稱 | AI Travel Guide Website |
-| GitHub Repository | https://github.com/d83080918/icap |
+| GitHub Repository | https://github.com/d83080918/Travel_Taiwan |
