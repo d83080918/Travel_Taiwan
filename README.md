@@ -216,7 +216,7 @@
 1. Githut檔下載
 
 ```cmd
-git clone https://github.com/d83080918/Travel_Taiwan
+git clone https://github.com/d83080918/Travel_Taiwan.git
 ```
 
 2. 安裝套件
