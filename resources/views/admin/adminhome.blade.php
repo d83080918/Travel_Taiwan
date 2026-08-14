@@ -603,8 +603,7 @@
 
                     },
                     error: function(xhr) {
-                        console.log("status:", xhr.status);
-                        console.log("response:", xhr.responseText);
+                        
                         Swal.fire("錯誤", "刪除失敗", "error");
 
                     }
