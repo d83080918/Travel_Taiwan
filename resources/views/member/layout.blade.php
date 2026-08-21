@@ -123,6 +123,7 @@
     <script src="/js/jquery-4.0.0.js"></script>
     <script src="/js/member/logout.js"></script>
     <script src="/js/member/login.js"></script>
+    <script src="/js/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         window.memberId = "{{ session('memberId') }}";

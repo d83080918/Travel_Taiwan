@@ -8,4 +8,5 @@ Route::group(["prefix" => "attraction"], function () {
     Route::get("list", [AttractionController::class, "list"]);
     // 收藏
     Route::post("addfavorite", [AttractionController::class, "addfavorite"]);
+    Route::get("hotel", [AttractionController::class, "showhotel"]);
 });

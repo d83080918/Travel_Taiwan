@@ -65,4 +65,11 @@ class AttractionController extends Controller
         $member = Member::where("id", session()->get("memberId"))->first();
         return view("attractions.home", compact("member"));
     }
+
+    public function showhotel()
+    {
+        $member = Member::where("id", session()->get("memberId"))->first();
+        $attraction = Attraction::with('city')->get();
+        return view("attractions.hotel", compact("member", "attraction"));
+    }
 }
