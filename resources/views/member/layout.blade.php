@@ -87,6 +87,11 @@
                             旅遊攻略
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/attraction/hotel">
+                            旅館查詢
+                        </a>
+                    </li>
                     @if(session()->has('memberId'))
                     @if(session('memberId') == 1)
                     <li class="nav-item">
